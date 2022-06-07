@@ -15,7 +15,7 @@
             <label class="nav__icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="nav__list">
                 <li class="nav__element"><a href="/biblioteka/biblioteka.html" class="nav__link">Biblioteka</a></li>
-                <li class="nav__element"><a href="#" class="nav__link">Logowanie</a></li>
+                <li class="nav__element"><a class="nav__link" onclick="openForm()">Logowanie</a></li>
                 <li class="nav__element"><a href="/kontakt/kontakt.html" class="nav__link">Kontakt</a></li>
             </ul>
         </nav>
@@ -23,6 +23,32 @@
     
     <main>
         <img class="main__baner" src="/pics/baner.jpg">
+        
+        <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <h1>Login</h1>
+          
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+          
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+          
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+          
+          <script>
+          function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+          </script>
+        
         <section class="main__section--small">
             <div class="section__wrap">
                 <h2 class="section__title">Masz problem z wybraniem w co chcesz zagrać?</h2>

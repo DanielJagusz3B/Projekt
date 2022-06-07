@@ -29,6 +29,7 @@
   color: white;
   text-decoration: none;
   border-right: 1px solid #056CBF;
+  cursor: pointer;
 }
 
 .nav__link:hover {
@@ -166,11 +167,57 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 10px;
+  transition-duration: 0.5s;
+}
+
+.section__btn:hover {
+  transform: scale(1.2, 1.2);
 }
 
 .section__btn--link {
   text-decoration: none;
   color: white;
+}
+
+.form-popup {
+  color: white;
+  display: none;
+  position: fixed;
+  right: 10px;
+  top: 70px;
+  border: 1px solid white;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #0D1F2F;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+}
+
+.form-container .btn {
+  background-color: #056cbf;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-container .cancel {
+  background-color: #056CBF;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  background-color: #0EABDC;
 }
 
 .footer {

@@ -125,7 +125,11 @@ body{
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 10px;
-    
+    transition-duration: 1s;
+}
+
+.section__btn:hover{
+    transform:scale(1.2,1.2);
 }
 
 .section__btn--link{
