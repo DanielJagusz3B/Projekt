@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+:root {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.header {
+    background-color: #056CBF;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.nav__list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color:#056CBF;
+}
+
+.nav__link{
+    padding: 20px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid #056CBF;
+}
+
+.nav__link:hover {
+    background-color: #0EABDC;
+}
+
+.nav__logo{
+    display: block;
+    font-size: 1.8em;
+    padding: 10px 20px;
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.nav__icon{
+    float: right;
+    padding: 30px 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav__icon .navicon {
+    background-color: white;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+}
+
+.nav__icon .navicon::before,.nav__icon .navicon::after {
+    content: " ";
+    background-color: white;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.nav__icon .navicon::before {
+    top: 5px;
+}
+
+.nav__icon .navicon::after {
+    top: -5px;
+}
+
+.nav__list {
+    clear: both;
+    max-height: 0px;
+    transition: max-height 0.4s ease-out;
+}
+
+.nav__btn {
+    display: none;
+}
+
+.nav__btn:checked ~ .nav__list {
+    max-height: 275px;
+}
+
+.nav__btn:checked ~ .nav__icon .navicon{
+background: transparent;
+}
+
+.nav__btn:checked ~ .nav__icon .navicon::before{
+    transform: rotate(45deg) translate(-7.5px);
+}
+
+.nav__btn:checked ~ .nav__icon .navicon::after{
+    transform: rotate(-45deg) translate(-7.5px);
+}
+
+body{
+    background-color: #08131D ;
+}
+
+.main__section{
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #0D1F2F ;
+    text-align: left;
+}
+
+.form__input{
+    margin: 5px;
+}
+
+.footer{
+    background-color: #056CBF;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 100px;
+    padding: 30px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
+@media (min-width:600px) {
+    .nav__element {
+        float: left;
+    }
+
+    .nav__list {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .nav__icon {
+        display: none;
+    }
+}
